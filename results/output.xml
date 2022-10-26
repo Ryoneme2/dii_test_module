@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.0 on darwin)" generated="20221026 15:10:38.951" rpa="false" schemaversion="3">
+<suite id="s1" name="groupRadio" source="/Users/jametirakarn/Desktop/Work_and_Project/RF01/TestCase/groupRadio.robot">
+<test id="s1-t1" name="TC1: Demo" line="7">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221026 15:10:39.095" level="INFO">Opening browser 'chrome' to base url 'https://demo.seleniumeasy.com/basic-radiobutton-demo.html'.</msg>
+<status status="PASS" starttime="20221026 15:10:39.094" endtime="20221026 15:11:10.032"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221026 15:11:10.037" endtime="20221026 15:11:10.172"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>css:.groupradiobutton</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221026 15:11:10.172" endtime="20221026 15:11:12.036"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>gender</arg>
+<arg>Male</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20221026 15:11:12.036" level="INFO">Selecting 'Male' from radio button 'gender'.</msg>
+<status status="PASS" starttime="20221026 15:11:12.036" endtime="20221026 15:11:12.288"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>ageGroup</arg>
+<arg>0 - 5</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20221026 15:11:12.288" level="INFO">Selecting '0 - 5' from radio button 'ageGroup'.</msg>
+<status status="PASS" starttime="20221026 15:11:12.288" endtime="20221026 15:11:12.374"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[contains(text(),'Get values')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221026 15:11:12.374" level="INFO">Clicking button '//button[contains(text(),'Get values')]'.</msg>
+<status status="PASS" starttime="20221026 15:11:12.374" endtime="20221026 15:11:12.497"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${result}</var>
+<arg>css:.groupradiobutton</arg>
+<arg>textContent</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20221026 15:11:12.547" level="INFO">${result} = Sex : Male Age group: 0 - 5</msg>
+<status status="PASS" starttime="20221026 15:11:12.497" endtime="20221026 15:11:12.547"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221026 15:11:12.549" endtime="20221026 15:11:12.549"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221026 15:11:13.553" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221026 15:11:12.550" endtime="20221026 15:11:13.553"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221026 15:11:13.553" endtime="20221026 15:11:13.629"/>
+</kw>
+<status status="PASS" starttime="20221026 15:10:39.094" endtime="20221026 15:11:13.629"/>
+</test>
+<status status="PASS" starttime="20221026 15:10:38.952" endtime="20221026 15:11:13.630"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="groupRadio">groupRadio</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.0 on darwin)" generated="20221025 14:37:29.912" rpa="false" schemaversion="3">
+<suite id="s1" name="Practice" source="/Users/jametirakarn/Desktop/Work_and_Project/RF01/TestCase/Practice.robot">
+<test id="s1-t1" name="TC1: Demo" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221025 14:37:30.027" level="INFO">Opening browser 'chrome' to base url 'http://google.com'.</msg>
+<status status="PASS" starttime="20221025 14:37:30.027" endtime="20221025 14:37:42.352"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221025 14:37:42.353" endtime="20221025 14:37:47.095"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${location}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20221025 14:37:47.189" level="INFO">${location} = https://www.google.com/?gws_rd=ssl</msg>
+<status status="PASS" starttime="20221025 14:37:47.095" endtime="20221025 14:37:47.189"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20221025 14:37:47.192" level="INFO">${title} = Google</msg>
+<status status="PASS" starttime="20221025 14:37:47.189" endtime="20221025 14:37:47.192"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${location} and ${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221025 14:37:47.192" endtime="20221025 14:37:47.193"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 14:37:50.195" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221025 14:37:47.193" endtime="20221025 14:37:50.196"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221025 14:37:50.197" endtime="20221025 14:37:50.270"/>
+</kw>
+<status status="PASS" starttime="20221025 14:37:30.027" endtime="20221025 14:37:50.270"/>
+</test>
+<status status="PASS" starttime="20221025 14:37:29.913" endtime="20221025 14:37:50.272"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Practice">Practice</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
