@@ -1,75 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.10.0 on darwin)" generated="20221026 15:16:39.129" rpa="false" schemaversion="3">
-<suite id="s1" name="groupRadio" source="/Users/jametirakarn/Desktop/Work_and_Project/RF01/TestCase/groupRadio.robot">
+<robot generator="Robot 6.0 (Python 3.10.0 on darwin)" generated="20221026 15:39:34.086" rpa="false" schemaversion="3">
+<suite id="s1" name="Dropdown" source="/Users/jametirakarn/Desktop/Work_and_Project/RF01/TestCase/Dropdown.robot">
 <test id="s1-t1" name="TC1: Demo" line="7">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221026 15:16:39.255" level="INFO">Opening browser 'chrome' to base url 'https://demo.seleniumeasy.com/basic-radiobutton-demo.html'.</msg>
-<status status="PASS" starttime="20221026 15:16:39.255" endtime="20221026 15:16:43.962"/>
+<msg timestamp="20221026 15:39:34.207" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/AutomationPractice/'.</msg>
+<status status="PASS" starttime="20221026 15:39:34.207" endtime="20221026 15:39:46.627"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221026 15:16:43.962" endtime="20221026 15:16:44.096"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>css:.groupradiobutton</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20221026 15:16:44.098" endtime="20221026 15:16:44.511"/>
+<status status="PASS" starttime="20221026 15:39:46.628" endtime="20221026 15:39:46.864"/>
 </kw>
 <kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>gender</arg>
-<arg>Male</arg>
+<arg>radioButton</arg>
+<arg>radio2</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20221026 15:16:44.512" level="INFO">Selecting 'Male' from radio button 'gender'.</msg>
-<status status="PASS" starttime="20221026 15:16:44.511" endtime="20221026 15:16:44.809"/>
+<msg timestamp="20221026 15:39:46.864" level="INFO">Selecting 'radio2' from radio button 'radioButton'.</msg>
+<status status="PASS" starttime="20221026 15:39:46.864" endtime="20221026 15:39:47.260"/>
 </kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>ageGroup</arg>
-<arg>0 - 5</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20221026 15:16:44.809" level="INFO">Selecting '0 - 5' from radio button 'ageGroup'.</msg>
-<status status="PASS" starttime="20221026 15:16:44.809" endtime="20221026 15:16:44.899"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>//button[contains(text(),'Get values')]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221026 15:16:44.900" level="INFO">Clicking button '//button[contains(text(),'Get values')]'.</msg>
-<status status="PASS" starttime="20221026 15:16:44.899" endtime="20221026 15:16:44.961"/>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>name:dropdown-class-example</arg>
+<arg>option2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20221026 15:39:47.261" level="INFO">Selecting options from selection list 'name:dropdown-class-example' by value option2.</msg>
+<status status="PASS" starttime="20221026 15:39:47.260" endtime="20221026 15:39:47.614"/>
 </kw>
 <kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${result}</var>
-<arg>css:.groupradiobutton</arg>
-<arg>textContent</arg>
+<var>${radio}</var>
+<arg>//input[@value='radio2']</arg>
+<arg>checked</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221026 15:16:44.982" level="INFO">${result} = Sex : Male Age group: 0 - 5</msg>
-<status status="PASS" starttime="20221026 15:16:44.962" endtime="20221026 15:16:44.982"/>
+<msg timestamp="20221026 15:39:47.647" level="INFO">${radio} = true</msg>
+<status status="PASS" starttime="20221026 15:39:47.614" endtime="20221026 15:39:47.647"/>
 </kw>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${result}</arg>
-<arg>Sex : Male Age group: 0 - 5</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20221026 15:16:44.982" endtime="20221026 15:16:44.982"/>
+<kw name="Convert To Boolean" library="BuiltIn">
+<var>${radio}</var>
+<arg>${radio}</arg>
+<doc>Converts the given item to Boolean true or false.</doc>
+<msg timestamp="20221026 15:39:47.648" level="INFO">${radio} = True</msg>
+<status status="PASS" starttime="20221026 15:39:47.647" endtime="20221026 15:39:47.648"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${dd}</var>
+<arg>name:dropdown-class-example</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20221026 15:39:47.659" level="INFO">${dd} = option2</msg>
+<status status="PASS" starttime="20221026 15:39:47.648" endtime="20221026 15:39:47.659"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${result}</arg>
+<arg>${radio} and ${dd}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221026 15:16:44.982" endtime="20221026 15:16:44.982"/>
+<status status="PASS" starttime="20221026 15:39:47.659" endtime="20221026 15:39:47.659"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${radio}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20221026 15:39:47.659" endtime="20221026 15:39:47.660"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${dd}</arg>
+<arg>option2</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20221026 15:39:47.660" endtime="20221026 15:39:47.660"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221026 15:16:45.985" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221026 15:16:44.982" endtime="20221026 15:16:45.986"/>
+<msg timestamp="20221026 15:39:48.661" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221026 15:39:47.660" endtime="20221026 15:39:48.661"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221026 15:16:45.986" endtime="20221026 15:16:46.052"/>
+<status status="PASS" starttime="20221026 15:39:48.661" endtime="20221026 15:39:48.736"/>
 </kw>
-<status status="PASS" starttime="20221026 15:16:39.254" endtime="20221026 15:16:46.052"/>
+<status status="PASS" starttime="20221026 15:39:34.206" endtime="20221026 15:39:48.736"/>
 </test>
-<status status="PASS" starttime="20221026 15:16:39.131" endtime="20221026 15:16:46.052"/>
+<status status="PASS" starttime="20221026 15:39:34.087" endtime="20221026 15:39:48.737"/>
 </suite>
 <statistics>
 <total>
@@ -78,7 +87,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="groupRadio">groupRadio</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Dropdown">Dropdown</stat>
 </suite>
 </statistics>
 <errors>
