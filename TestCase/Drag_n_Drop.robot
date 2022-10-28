@@ -5,7 +5,7 @@ Library  String
 ${URL}  https://demos.telerik.com/kendo-ui/dragdrop/index
 ${BROWSER}  chrome
 *** Test Cases ***
-TC1 : Alert Box
+TC1 : Drag and drop
     open browser  ${URL}  ${BROWSER}
     maximize browser window
 

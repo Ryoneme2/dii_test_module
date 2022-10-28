@@ -5,7 +5,7 @@ Library  String
 ${URL}  https://th.indeed.com/
 ${BROWSER}  chrome
 *** Test Cases ***
-TC1 : Alert Box
+TC1 : Find job
     open browser  ${URL}  ${BROWSER}
     maximize browser window
 

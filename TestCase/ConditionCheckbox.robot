@@ -5,7 +5,7 @@ Library  String
 ${URL}  https://the-internet.herokuapp.com/checkboxes
 ${BROWSER}  chrome
 *** Test Cases ***
-TC1 : Alert Box
+TC1 : Condition check box
     open browser  ${URL}  ${BROWSER}
     maximize browser window
 
